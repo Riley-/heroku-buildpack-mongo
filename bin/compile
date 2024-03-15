@@ -20,7 +20,7 @@ echo "-----> Downloading and installing MongoDB version ${mongo_version}..."
 [[ $STACK = "heroku-22" ]] && os_id="amazon"
 
 # file_name="mongodb-linux-x86_64-${os_id}-${mongo_version}.tgz"
-# file_name="mongodb-linux-x86_64-amazon2-7.0.6.tgz"
+file_name="mongodb-linux-x86_64-amazon2-7.0.6.tgz"
 folder_name=`echo "$file_name" | sed 's/\.tgz$//'`
 download_url="https://fastdl.mongodb.org/linux/${file_name}"
 curl $download_url -s -o - | tar xzf - -C /tmp
