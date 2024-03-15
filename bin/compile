@@ -15,11 +15,12 @@ mkdir -p $heroku_dir/mongo
 warnings=$(mktemp)
 
 # Install MongoDB to use mongo commands
-mongo_version="100.9.4"
+mongo_version="4.1.5"
 echo "-----> Downloading and installing MongoDB version ${mongo_version}..."
 [[ $STACK = "heroku-22" ]] && os_id="amazon"
 
-file_name="mongodb-linux-x86_64-${os_id}-${mongo_version}.tgz"
+# file_name="mongodb-linux-x86_64-${os_id}-${mongo_version}.tgz"
+file_name="mongodb-linux-x86_64-amazon2-7.0.6.tgz"
 folder_name=`echo "$file_name" | sed 's/\.tgz$//'`
 download_url="https://fastdl.mongodb.org/linux/${file_name}"
 curl $download_url -s -o - | tar xzf - -C /tmp
