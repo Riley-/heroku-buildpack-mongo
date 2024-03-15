@@ -25,7 +25,7 @@ folder_name=`echo "$file_name" | sed 's/\.tgz$//'`
 # download_url="https://fastdl.mongodb.org/linux/${file_name}"
 # curl $download_url -s -o - | tar xzf - -C /tmp
 
-download_url="https://fastdl.mongodb.org/tools/db/mongodb-database-tools-amazon-x86_64-100.9.4.zip"
+download_url="https://fastdl.mongodb.org/tools/db/mongodb-database-tools-amazon-x86_64-100.9.4.tgz"
 curl $download_url -s -o - | tar xzf - -C /tmp
 
 # Move MongoDB binaries into the app directory
