@@ -25,8 +25,9 @@ file_name="mongodb-database-tools-amazon-x86_64-100.9.4.tgz"
 folder_name=`echo "$file_name" | sed 's/\.tgz$//'`
 # download_url="https://fastdl.mongodb.org/linux/${file_name}"
 download_url="https://fastdl.mongodb.org/tools/db/${file_name}"
-# curl $download_url -s -o - | tar xzf - -C /tmp
-ls -lah /tmp
+curl $download_url -s -o - | tar xzf - -C /tmp
+#ls -lah /tmp
+
 # Move MongoDB binaries into the app directory
 mv "/tmp/${folder_name}"/* $heroku_dir/mongo
 chmod +x $heroku_dir/mongo/bin/*
